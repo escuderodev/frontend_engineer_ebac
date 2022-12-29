@@ -1,0 +1,86 @@
+--- Configurando e utilizando o GitHub ---
+
+git init
+
+git status
+
+git config --global user.name "Eduardo Escudero"
+
+git config --global user.email "escudero.ti@gmail.com"
+
+vá para (/home/escudero/.ssh/) onde deveremos coletar as chaves pub e private.
+
+criando uma chave ssh no Git Bash:
+ssh-keygen -t ed25519 -C escudero.ti@gmail.com
+
+insira o nome da chave id_ed25519
+
+vamos usar o comando "cat id_ed25519.pub" para visualizar o conteúdo da chave que add no GitHub.
+
+vamos colar a chave pub no GitHub em "SSH and GOG Keys"
+
+vamos inicializar o SSH Agent com o comando "eval $(ssh-agent -s)"
+
+agora vamos passar o caminho da chave e como estamos na pasta das chaves, basta passar o comando "ssh-add id_ed25519" e temos de digitar a senha criada junto com a chave.
+
+git clone git@github.com:escudero-ti/projetos.git
+
+git clone git@github.com:escudero-ti/formacao_profissional.git
+
+git clone git@github.com:escuderodev/Potencia_Tech_powered_by_iFood_Java_Beginners.git
+
+#para sincronizar os arquivos auterados a sequência é:
+
+git init
+
+git status
+
+git add *
+
+git commit -m "att"
+
+git push origin main
+
+
+--- Comandos do Terminal ---
+- ls ou dir = mostra os arquivos e pastas existentes no diretório;
+- Ctrl + L ou cls ou clear = limpa o terminal;
+- mkdir = cria um novo diretório;
+- rm nome_do_arquivo = remove um arquivo ou diretório;
+    obs.: o arquivo echo também subscreve o conteúdo do arquivo existente. Cuidado!
+- cat nome_do_arquivo = mostra o conteúdo do arquivo;
+- echo "nome_do_arquivo" = cria um novo arquivo;
+- echo "conteúdo" > nome_do_arquivo.txt = cria um novo arquivo com o conteúdo digitado no diretório;
+
+
+
+--- changelog ---
+Toda vez que criarmos um novo projeto/repositório devemos add um arquivo changelog.md que deverá conter um resumo de todas as alterações realizadas no projeto.
+    - acessar o site: https://keepachangelog.com/en/1.0.0/ para copiar o texto inicial do change.log.
+
+--- Types of changes ---
+Added for new features.
+Changed for changes in existing functionality.
+Deprecated for soon-to-be removed features.
+Removed for now removed features.
+Fixed for any bug fixes.
+Security in case of vulnerabilities.
+
+
+--- Logs ---
+- git log = mostra o log de registros de todos os logs relaizados no repositório;
+- git log -m 2 = mostra apenas os 2 últimos logs do repositório;
+- git log --oneline = mostra os commits resumidos em apenas uma linha;
+- git log --stat = mostra os commits completo com o nome dos arquivos alterados;
+
+obs: no vscode basta instalar a extenção git history e com ela instalada, basta abrir um determinado aruquivo, teclar F1 e digitar git log, ao selecionar a opção View History será exibido o histórioco de logs e commits do arquivo.
+
+- git checkout = desfaz arquivos alterados e ou retorna para uma versão anterior do arquivo;
+    para retornar para um estado/commit anterior devemos usar o comando da seguinte forma: git checkout id_commit (hash)
+- git revert HEAD id_commit = reverte um commit anterior;
+- git branch = lista todas as branchs;
+- git checkout nome_branch = muda para a branch informada;
+- git branch nome_nova_branch = cria uma nova branch;
+- git branch -D nome_branch = deleta a branch;
+- git branch -b nome_nova_branch = cria uma nova branch e muda automaticamente para ela;
+- git merge nome_branch = copia o conteúdo de uma branch para outro;

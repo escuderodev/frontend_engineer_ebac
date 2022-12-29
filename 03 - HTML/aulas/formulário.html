@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <header>
+        Trabalhando com Formulário
+        <a href="./arquivos_midia.html">Ir para Arquivos de Mídia</a>
+    </header>
+    <main>
+        <form>
+            <label for="nome">Nome:* </label><input type="text" name="nome" id="nome" placeholder="Nome:" required><br>
+            <label for="idade">Idade: * </label><input type="number" name="idade" id="idade" min="1" max="110" step="1" placeholder="Idade:" required><br>
+            <label for="email">e-mail:* </label><input type="email" name="email" id="email" placeholder="e-mail" required><br>
+            <label for="arquivo">Arquivo:</label><input type="file" name="arquivo" id="arquivo"><br>  
+            <input type="checkbox" name="checkbox" id="checkbox"> <label for="checkbox">Aceito os termos.</label><br>
+            <p>Escolha abaixo a sua cor favorita:</p>
+            <input type="radio" name="cor_favorita" id="vermelho"> <label for="vermelho">Vermelho</label>
+            <input type="radio" name="cor_favorita" id="amarelo"> <label for="amarelo">Amarelo</label>
+            <input type="radio" name="cor_favorita" id="azul"> <label for="azul">Azul</label><br>
+            <label for="filme">Qual o seu filme favorito?</label><br>
+            <select name="filme" id="filme">
+                <option value="Filme A">Filme A</option>
+                <option value="Filme B">Filme B</option>
+                <option value="Filme C">Filme C</option>
+            </select><br><br>
+            <!-- se <select multiple>...</select> usuário pode selecionar mais de uma opção -->
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea><br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </main>
+</body>
+</html>
