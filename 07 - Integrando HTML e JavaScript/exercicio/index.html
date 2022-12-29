@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valida Formulário</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <div class="form_container">
+            <h1 class="titulo">Validação de campos:</h1>
+            <p class="mensagem">Digite um número entre 0 e 9</p>
+            <form class="form">
+                <input type="number" name="num1" id="num1" min="0" max="9" placeholder="Número A">
+                <input type="number" name="num2" id="num2" min="0" max="9" placeholder="Número B">     
+                <p class="error_message">O Número B deve ser maior que o Número A</p>   
+                <p class="success_message">O Número B é maior que o Número A</p>   
+            </form>
+        </div>
+        <div class="orientacao">
+            <p>Orientações:<br>
+                Este formulário tem por objetivo testar a validaçção de campos em JavaScript.<br>
+                Digite os valores para os campos A e B, sendo que o valor de B somente será válido se for maior do que A.
+            </p>
+        </div>
+    </header>
+    <script src="./main.js"></script>
+</body>
+</html>
