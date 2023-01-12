@@ -10,8 +10,15 @@ $(document).ready(function() {
     })
 
     $('form').on('submit', function(e) {
-        console.log('submit');
         e.preventDefault();
+        const url = $('#url').val();
+        // console.log(url);
+        const novoItem = $('<li style="display: none"></li>');
+        $(`<img src="${url}">`).appendTo(novoItem);
+        $(`<div class="overlay_imagem_link"><a href="${url}" target="_blank" title="Ver imagem em tamanho real">Ver imagem em tamanho real</a></div>`).appendTo(novoItem);
+        $(novoItem).appendTo(`ul`);
+        $(novoItem).fadeIn(1000);
+        $('#url').val('');
     })
 
     $('#reset').click(function() {
