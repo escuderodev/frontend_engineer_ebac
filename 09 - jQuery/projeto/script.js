@@ -10,7 +10,6 @@ $(document).ready(function() {
 
             $('ul.lista_container li').click(function () {
                 const li = $(this).text();
-                // $("li").css("color", "red");
                 $("li").css("text-decoration", "line-through");
             })
             
