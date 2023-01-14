@@ -77,8 +77,8 @@ input::placeholder {
 }
 
 #btn_submit:hover {
-  background-color: #fff;
-  color: #000;
+  background-color: #ff0000;
+  color: #fff;
   transition: 0.5s all;
 }
 
