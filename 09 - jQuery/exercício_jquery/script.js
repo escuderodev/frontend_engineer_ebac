@@ -9,8 +9,7 @@ $(document).ready(function() {
             $('#tarefa').val('');
 
             $('ul.lista_container li').click(function () {
-                const li = $(this).text();
-                $("li").css("text-decoration", "line-through");
+                const li = $(this).css("text-decoration", "line-through");
             })
             
         })
