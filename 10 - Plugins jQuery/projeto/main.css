@@ -5,9 +5,52 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+}
+
 header {
     background-color: #192a56;
-    padding: 1rem 0;
+    padding-top: 1rem;
     color: #fff;
 }
 
+nav {
+    background-color: #575fcf;
+    padding: 1rem 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline;
+    margin-right: 1rem;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu_hamburguer {
+    width: 2rem;
+}
+
+.menu_hamburguer span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
+}
