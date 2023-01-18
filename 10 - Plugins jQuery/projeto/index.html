@@ -36,15 +36,22 @@
             </div>
         </nav>
     </header>
-    <section class="carrossel">
-        <img src="./img/images/slide1.png" alt="imagem de um carro bmw">
-        <img src="./img/images/slide2.png" alt="">
-        <img src="./img/images/slide3.png" alt="">
+    <section class="carrossel" id="carrossel">
+        <img src="./img/images/slide1.png" alt="imagem de um porshe">
+        <img src="./img/images/slide2.png" alt="imagem de um bmw">
+        <img src="./img/images/slide3.png" alt="imagem de um ford gt">
     </section>
-
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#carrossel').slick({
+                autoplay: true
+            });
+        })
+    </script>
 </body>
 
 </html>
